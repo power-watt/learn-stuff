@@ -1,0 +1,69 @@
+Helpful notes on git. 
+Sometimes this stuff gets dated but oh well. 
+ 
+ 
+                        .................................................
+                        ..................... Tracked ...................
+                        .................................................
+Untracked               Unmodified              Modified                Staged
+|                       |                       |                       | 
+|   Add a file          |                       |                       |
+----------------------------------------------------------------------->|
+|   git add <file>      |                       |                       |
+|                       |   Edit a file         |                       |
+|                       |---------------------->|                       |
+|                       |                       |                       |
+|   Remove a file       |                       |   Stage a file        |
+|<----------------------|                       |---------------------->|
+|    git rm <file>      | Revert                |   git add <file>      |
+|                       |<----------------------|                       | 
+|                       | git checkout --<file> |                       | 
+|                       |                       | Unstage               | 
+|                       |                       |<----------------------| 
+|                       |                       | git reset HEAD <file> | 
+|                       |                       |                       | 
+|                       |   Commit              |                       | 
+|                       |<----------------------------------------------|
+|                       |   git commit          |                       | 
+|                       |                       |                       | 
+
+******************************
+- To rename/move things
+$ git mv <file>
+
+******************************
+- commit to local repo
+$ git commit -m "initial commit description"
+
+******************************
+- Push to main repo on GitHub
+$ git push origin main
+
+
+- If you forgot a file after doing a commit
+$ git add <forgotten_file>
+$ git commit --amend
+- The old commit gets completely replaced by the new one. It doesn't show in the
+history, it's as if the old commit never happend. Does not clutter history.
+
+- Stage everything
+$ git add -A
+
+- updates all brandes of a repo
+$ git pull --all
+
+- completely reset repo
+$ git fetch --all
+$ git reset --hard/master
+
+- Go back in commits
+$ git reset --hard HEAD~1
+- alternate method
+$ git log
+$ git reset --hard <Sha1-commit-id>
+
+- Force push to GitHub
+$ git push origin HEAD --force
+
+- Remove Empty directory
+$ git clean -fd

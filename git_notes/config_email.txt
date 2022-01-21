@@ -1,0 +1,5 @@
+To configure git email
+$ git config --global user.email "email@example.com"
+
+To see current email configuration
+$ git config --global user.email
