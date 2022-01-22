@@ -1,5 +1,7 @@
-To configure git email
+If you don't configure your email then github will not register commits to your account
+
+- To configure git email
 $ git config --global user.email "email@example.com"
 
-To see current email configuration
+- To see current email configuration
 $ git config --global user.email
